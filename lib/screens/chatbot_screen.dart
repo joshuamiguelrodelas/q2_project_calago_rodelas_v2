@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 
 class ChatBotScreen extends StatefulWidget {
   const ChatBotScreen({super.key});
@@ -14,7 +16,7 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
   final List<Map<String, String>> _messages = [];
   final ScrollController _scrollController = ScrollController();
 
-  final String apiKey = "AIzaSyC4N8aRRqQ0t97e1KMFvEHEj1hn3fQFMrA";
+   final String apiKey = dotenv.env['GOOGLE_API_KEY'] ?? '';
 
   late GenerativeModel _model;
   late ChatSession _chat;

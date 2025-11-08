@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "369740196405",
+    "project_id": "my-enfo-hub-6f543",
+    "storage_bucket": "my-enfo-hub-6f543.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369740196405:android:c4129c18299dbdf002df7c",
+        "android_client_info": {
+          "package_name": "com.example.e_nfohub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmEHyf6hOlRrfD3LTTSfrxTdLWFHCMpNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

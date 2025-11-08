@@ -1,0 +1,34 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "my-enfo-hub-6f543",
+          "appId": "1:369740196405:android:c4129c18299dbdf002df7c",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "my-enfo-hub-6f543",
+          "configurations": {
+            "android": "1:369740196405:android:c4129c18299dbdf002df7c",
+            "web": "1:369740196405:web:b1fe2edf0375ce7702df7c"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+
+  
+}

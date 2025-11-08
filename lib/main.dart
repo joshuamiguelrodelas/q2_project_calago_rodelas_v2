@@ -6,18 +6,15 @@ import 'screens/main_navigation.dart';
 import 'screens/login_screen.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Firebase
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // Load environment variables
+ await dotenv.load(fileName: 'assets/.env');
 
-  // Only set persistence on web (Android/iOS do not support it)
-  if (kIsWeb) {
-    await FirebaseAuth.instance.setPersistence(Persistence.LOCAL);
-  }
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  await FirebaseAuth.instance.setPersistence(Persistence.LOCAL);
 
   runApp(const EInfoHubApp());
 }
